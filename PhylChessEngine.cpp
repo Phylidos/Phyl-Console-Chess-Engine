@@ -6,7 +6,7 @@
 
 using namespace std;
 
-// --- 1. Constants & Definitions ---
+// Constants & Definitions
 const int EMPTY = 0;
 const int PAWN = 1, KNIGHT = 2, BISHOP = 3, ROOK = 4, QUEEN = 5, KING = 6;
 const int WHITE = 8, BLACK = 16;
@@ -31,8 +31,7 @@ struct Move {
     }
 };
 
-// --- 2. Piece-Square Tables ---
-// (Simplified tables to keep code shorter for this test)
+// Piece-Square Tables
 const int pawnTable[] = {
     0,  0,  0,  0,  0,  0,  0,  0,
     50, 50, 50, 50, 50, 50, 50, 50,
@@ -123,7 +122,7 @@ public:
         sideToMove = true;
     }
 
-    // --- VISUALIZATION (ASCII GUI) ---
+    // ASCII GUI
     void printBoard() {
         cout << "\n   +---+---+---+---+---+---+---+---+" << endl;
         for (int r = 7; r >= 0; r--) {
@@ -427,7 +426,6 @@ public:
     }
 };
 
-// --- 3. NEW MAIN: INTERACTIVE CONSOLE GAME ---
 int main() {
     Engine engine;
     string userMove;
